@@ -71,12 +71,12 @@
           :label="$t('buttons.upload')"
           @action="upload"
         />
-        <action icon="info" :label="$t('buttons.info')" show="info" />
-        <action
+        <!-- <action icon="info" :label="$t('buttons.info')" show="info" /> -->
+        <!-- <action
           icon="check_circle"
           :label="$t('buttons.selectMultiple')"
           @action="toggleMultipleSelection"
-        />
+        /> -->
       </template>
     </header-bar>
 
@@ -135,7 +135,6 @@
           type="file"
           id="upload-input"
           @change="uploadInput($event)"
-          multiple
         />
         <input
           style="display: none"
@@ -267,7 +266,7 @@
 import Vue from "vue";
 import { mapState, mapGetters, mapMutations } from "vuex";
 import { users, files as api } from "@/api";
-import { enableExec } from "@/utils/constants";
+//import { enableExec } from "@/utils/constants";
 import * as upload from "@/utils/upload";
 import css from "@/utils/css";
 import throttle from "lodash.throttle";
@@ -374,12 +373,12 @@ export default {
       return {
         upload: this.user.perm.create,
         download: this.user.perm.download,
-        shell: this.user.perm.execute && enableExec,
+      //  shell: this.user.perm.execute && enableExec,
         delete: this.selectedCount > 0 && this.user.perm.delete,
-        rename: this.selectedCount === 1 && this.user.perm.rename,
-        share: this.selectedCount === 1 && this.user.perm.share,
-        move: this.selectedCount > 0 && this.user.perm.rename,
-        copy: this.selectedCount > 0 && this.user.perm.create,
+      //  rename: this.selectedCount === 1 && this.user.perm.rename,
+      //  share: this.selectedCount === 1 && this.user.perm.share,
+      //  move: this.selectedCount > 0 && this.user.perm.rename,
+      //  copy: this.selectedCount > 0 && this.user.perm.create,
       };
     },
     isMobile() {

@@ -21,6 +21,7 @@ import ua from "./ua.json";
 import svSE from "./sv-se.json";
 import zhCN from "./zh-cn.json";
 import zhTW from "./zh-tw.json";
+import hu from "./hu.json";
 
 Vue.use(VueI18n);
 
@@ -78,6 +79,9 @@ export function detectLocale() {
     case /^ua.*/i.test(locale):
       locale = "ua";
       break;
+    case /^hu.*/i.test(locale):
+        locale = "hu";
+        break;
     default:
       locale = "en";
   }
@@ -120,6 +124,7 @@ const i18n = new VueI18n({
     ua: removeEmpty(ua),
     "zh-cn": removeEmpty(zhCN),
     "zh-tw": removeEmpty(zhTW),
+    hu: removeEmpty(hu),
   },
 });
 

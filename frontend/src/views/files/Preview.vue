@@ -84,12 +84,7 @@
           you can <a :href="downloadUrl">download it</a>
           and watch it with your favorite video player!
         </video>
-        <object
-          v-else-if="req.extension.toLowerCase() == '.pdf'"
-          class="pdf"
-          :data="raw"
-        ></object>
-        <div v-else-if="req.type == 'blob'" class="info">
+        <div v-else-if="req.type == 'blob' || req.extension.toLowerCase() == '.pdf'" class="info">
           <div class="title">
             <i class="material-icons">feedback</i>
             {{ $t("files.noPreview") }}

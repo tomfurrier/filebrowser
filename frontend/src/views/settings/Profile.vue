@@ -8,14 +8,14 @@
 
         <div class="card-content">
           <p>
-            <input type="checkbox" v-model="hideDotfiles" />
+            <input type="checkbox" v-model="hideDotfiles"/>
             {{ $t("settings.hideDotfiles") }}
           </p>
           <p>
             <input type="checkbox" v-model="singleClick" />
             {{ $t("settings.singleClick") }}
           </p>
-          <p>
+          <p v-if="user.perm.admin">
             <input type="checkbox" v-model="dateFormat" />
             {{ $t("settings.setDateFormat") }}
           </p>
@@ -85,10 +85,10 @@ export default {
     return {
       password: "",
       passwordConf: "",
-      hideDotfiles: false,
-      singleClick: false,
+      hideDotfiles: true,
+      singleClick: true,
       dateFormat: false,
-      locale: "",
+      locale: "hu",
     };
   },
   computed: {

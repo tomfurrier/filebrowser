@@ -103,7 +103,8 @@
     "tr": "Türkçe",
     "ua": "Українська",
     "zhCN": "中文 (简体)",
-    "zhTW": "中文 (繁體)"
+    "zhTW": "中文 (繁體)",
+    "hu": "Magyar"
   },
   "login": {
     "createAnAccount": "Create an account",
@@ -153,7 +154,8 @@
     "upload": "Upload",
     "uploadFiles": "Uploading {files} files...",
     "uploadMessage": "Select an option to upload.",
-    "optionalPassword": "Optional password"
+    "optionalPassword": "Optional password",
+    "setExpirationMessage": "Add expiration in days:"
   },
   "search": {
     "images": "Images",

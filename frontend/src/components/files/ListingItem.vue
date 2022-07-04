@@ -67,7 +67,7 @@ export default {
     },
     isSelected() {
       return this.selected.indexOf(this.index) !== -1;
-    },
+    },    
     isDraggable() {
       return this.readOnly == undefined && this.user.perm.rename;
     },

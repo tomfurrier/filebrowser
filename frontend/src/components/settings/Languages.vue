@@ -34,6 +34,7 @@ export default {
         ua: "ua",
         "zh-cn": "zhCN",
         "zh-tw": "zhTW",
+        hu: "hu"
       },
     };
 

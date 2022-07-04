@@ -11,7 +11,8 @@
         <span>{{ $t("sidebar.myFiles") }}</span>
       </button>
 
-      <div v-if="user.perm.create">
+      <!-- <div v-if="user.perm.create"> -->
+      <div v-if="user.perm.admin">
         <button
           @click="$store.commit('showHover', 'newDir')"
           class="action"
